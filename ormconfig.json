@@ -1,0 +1,6 @@
+{
+    "type": "sqlite",
+    "database": "node-todo",
+    "synchronize": true,
+    "logging": true
+ }

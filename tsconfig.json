@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "lib": [
+            "es2018"
+        ],
+        "moduleResolution": "node",
+        "outDir": "dist",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "sourceMap": true,
+        "module": "commonjs",
+        "noUnusedLocals": true,
+        "skipLibCheck": true,
+        "target": "ES2016",
+        "strictNullChecks": true,
+    },
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

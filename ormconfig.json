@@ -1,6 +1,9 @@
 {
     "type": "sqlite",
-    "database": "node-todo",
+    "database": "todo",
     "synchronize": true,
-    "logging": true
+    "logging": true,
+    "entities": [
+        "src/entity/**/*.ts"
+     ]
  }

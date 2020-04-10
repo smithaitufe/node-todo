@@ -39,7 +39,6 @@ export class TodoResolver {
             throw new Error("invalid todo id")
         }
         await this.todoRepository.softDelete(id)
-        return (await this.todoRepository.findOne(id))!
-        
+        return (await this.todoRepository.findOne(id))!        
     }
 }

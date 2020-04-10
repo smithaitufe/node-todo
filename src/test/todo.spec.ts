@@ -14,6 +14,8 @@ describe("todos", () => {
         .send({ query: '{ todos { id description completed } }'})
         .expect(200)
         .end((err, res) => {
+            expect(res.body.data.todos).not.toBeNull()
+            expect(res.body.data.todos.length).toBeGreaterThan(0)
             done()
         })
     })

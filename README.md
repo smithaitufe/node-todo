@@ -4,10 +4,10 @@ The purpose of this repo is to demonstrate how to use NodeJS, TypeORM, TypeGraph
 
 ## Usage
 
-* From my local computer's terminal run `git clone https://github.com/smithaitufe/node-todo.git`
+* From your local computer's terminal, run `git clone https://github.com/smithaitufe/node-todo.git`
 * Change to `node-todo` directory using `cd node-todo`
 * Run `npm install` to download packages
-* Run `npm start` to start the apollo server
+* Run `npm start` to start both the express app and apollo server
 * Go to your web browser address bar and type `http://localhost:3000`
 
 ## Example graphql request

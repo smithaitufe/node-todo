@@ -24,7 +24,19 @@ query todos {
   }
 }
 ```
-2   Create a new todo item
+2   Fetch a todo item 
+```
+query todo {
+  todo(id: 10){
+    id
+    description
+    completed
+    createdAt
+    updatedAt
+  }
+}
+```
+3   Create a new todo item
 ```
 mutation createTodo {
   createTodo(input: { description: "Have a meeting with the team"}) {
@@ -34,8 +46,7 @@ mutation createTodo {
   }
 }
 ```
-
-3   Update existing todo
+4   Update existing todo
 ```
 mutation editTodo {
   editTodo(id: 1, input: { description: "Have a meeting with the team", completed: true }) {
@@ -44,8 +55,7 @@ mutation editTodo {
   }
 }
 ```
-
-4   Remove existing todo
+5   Remove existing todo
 ```
 mutation deleteTodo {
   deleteTodo(id: 1){

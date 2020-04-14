@@ -14,7 +14,11 @@ export class TodoResolver {
             order: { createdAt: "ASC" },
         })
     }
-    
+    @Query(type => Todo,{ nullable: true })
+    async todo(@Arg("id", { nullable: false }) id: number): Promise<Todo | undefined> {
+        const todo = await this.todoRepository.findOne(id)
+        return todo
+    }
     @Mutation(returns => Todo)
     async createTodo(@Arg("input") input: TodoInput): Promise<Todo> {
         let todo = this.todoRepository.create({ ...input })        

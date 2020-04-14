@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon -w src --ext ts --exec ts-node src/index.ts",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
-    "test": "jest --watch"
+    "test": "jest --clearCache && jest --watch"
   },
   "keywords": [
     "TypeORM",

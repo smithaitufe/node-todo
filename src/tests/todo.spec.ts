@@ -54,4 +54,22 @@ describe("resolver", () => {
             done()
         })
     })
+    it("Get a todo", (done) => {
+        request
+        .post("/graphql")
+        .send({ query: ` 
+            query todo {
+                todo(id: 1) { 
+                    id 
+                    description 
+                    completed 
+                } 
+            }
+        `})
+        .expect(200)
+        .end((err, res) => {
+            expect(res.body.data.todo).not.toBeNull()            
+            done()
+        })
+    })
 })
